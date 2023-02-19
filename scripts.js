@@ -18,7 +18,6 @@ function submitHandler(e) {
     const base64String = btoa(binaryString);
 
     // Send the base64String to the server using an HTTP request
-    console.log(base64String);
     const url = "http://localhost:8000/upload";
     const body = base64String;
 

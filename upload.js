@@ -1,12 +1,14 @@
 const http = require("http");
 const fs = require("fs");
 
+// cors middleware
 function setCorsHeaders(req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   console.log(req.headers);
   next();
 }
 
+// this function handles my request after cors middleware
 function myapi(req, res) {
   if (req.url === "/upload") {
     let imageData = "";
